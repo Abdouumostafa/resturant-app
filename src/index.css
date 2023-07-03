@@ -1,13 +1,82 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-base: 'Cormorant Upright', serif;
+  --font-alt: 'Open Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
 }
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.font-base {
+  font-family: 'Cormorant Upright', serif;
+}
+
+.slide-bottom {
+  animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.app__bg {
+  background: url('./assets/bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* // const styles = {
+  //   boxWidth: "xl:max-w-[1280px] w-full",
+  
+  //   heading2:
+  //     "font-poppins font-semibold xs:text-[40px] text-[30px] text-white xs:leading-[76px] leading-[66px] w-full",
+  //   paragraph:
+  //     "font-poppins font-normal text-dimWhite text-[16px] leading-[30.8px]",
+  
+  //   flexCenter: "flex justify-center items-center",
+  //   flexStart: "flex justify-center items-start",
+  
+  //   paddingX: "sm:px-16 px-6",
+  //   paddingY: "sm:py-16 py-6",
+  //   padding: "sm:py-16 py-6 sm:px-16 px-6",
+  
+  //   marginX: "sm:mx-16 mx-6",
+  //   marginY: "sm:my-16 my-6",
+  // };
+  
+  // export const layout = {
+  //   section: `flex md:flex-row flex-col ${styles.paddingY}`,
+  //   sectionReverse: `flex md:flex-row flex-col-reverse ${styles.paddingY}`,
+  
+  //   sectionImgReverse: `flex-1 flex ${styles.flexCenter} md:mr-10 mr-0 md:mt-0 mt-10 relative`,
+  //   sectionImg: `flex-1 flex ${styles.flexCenter} md:ml-10 ml-0 md:mt-0 mt-10 relative`,
+  
+  //   sectionInfo: `flex-1 ${styles.flexStart} flex-col`,
+  // };
+  
+  export default styles;
+   */
